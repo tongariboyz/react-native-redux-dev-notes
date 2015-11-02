@@ -1,0 +1,48 @@
+plugins:
+  - jtf-style
+
+rules:
+  # 一文中の句点数制限
+  # https://github.com/azu/textlint-rule-max-ten
+  max-ten:
+    max: 3
+  # である調、ですます調の混在禁止
+  # https://github.com/azu/textlint-rule-no-mix-dearu-desumasu
+  no-mix-dearu-desumasu: true
+  # 指定文数内での接頭辞の重複を禁止
+  # https://github.com/azu/textlint-rule-no-start-duplicated-conjunction
+  no-start-duplicated-conjunction:
+    interval: 2
+  # 技術用語辞書を有効化
+  # https://github.com/azu/textlint-rule-spellcheck-tech-word
+  spellcheck-tech-word: false
+
+  ##
+  # 表記ゆれ辞書
+  # https://github.com/azu/textlint-rule-prh
+  ##
+  prh:
+    rulePaths:
+      - prh.yml
+      # FIXME: textlint-rule-spellcheck-tech-word を有効にしたい
+      # 上記プラグインを有効にすると定義済の Redux ルールをうまく上書きできない
+      # (-redux- が -Redux- に変換されてしまう)
+      # ここで明示的に読み込み順を指定した上で
+      # prh に上書きルールを書くと、なんとか redux-xxx を有効にできる
+      - node_modules/technical-word-rules/dict/JavaScript.yml
+      - node_modules/technical-word-rules/dict/jser-info.yml
+      - node_modules/technical-word-rules/dict/software.yml
+      - node_modules/technical-word-rules/dict/typo.yml
+      - node_modules/technical-word-rules/dict/unique-noun.yml
+      - node_modules/technical-word-rules/dict/web+db.yml
+
+  ##
+  # JTF日本語標準スタイルガイド
+  # https://github.com/azu/textlint-plugin-JTF-style
+  # XXX: デフォルトだと全ルールが有効
+  ##
+  # 本文でのである調、ですます調の混在禁止
+  # XXX: dearu-desumasu で設定済
+  jtf-style/1.1.1.本文: false
+  # カタカナの長音を強制
+  jtf-style/2.1.6.カタカナの長音: false
