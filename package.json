@@ -39,7 +39,7 @@
     "eslint": "^1.7.3",
     "eslint-config-kanmu": "^8.0.0",
     "eslint-plugin-markdown": "git://github.com/eslint/eslint-plugin-markdown.git",
-    "eslint-plugin-react": "^3.6.3",
+    "eslint-plugin-react": "^3.7.0",
     "espower-babel": "^3.3.0",
     "gitbook-cli": "^1.0.0",
     "gitbook-plugin-include-codeblock": "^1.4.0",
