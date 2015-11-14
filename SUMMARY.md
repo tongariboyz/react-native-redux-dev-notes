@@ -1,1 +1,2 @@
 - [はじめに](ja/introduction.md)
+- [Smart and Dumb Components](ja/smartAndDumbComponent.md)
