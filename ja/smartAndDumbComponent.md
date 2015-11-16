@@ -95,6 +95,9 @@ export default Counter
 
 Smart ComponentとDumb Componentの階層関係を示す。
 
+- Smart Componentは、Smart/Dumb両コンポーネントを内包できる
+- Dumb Componentは、Dumbコンポーネントのみ内包できる
+
 許可 | パターン
 :---:|---
 ○ | Smart > Smart > Dumb
@@ -102,8 +105,6 @@ Smart ComponentとDumb Componentの階層関係を示す。
 × | Smart > Dumb > Smart > Dumb
 ○ | Dumb > Dumb
 × | Dumb > Smart
-
-Smart Componentの子孫にSmart Componentがくることは問題ないが、3つ目のパターンのようにDumb Componentを間に挟む場合は、複雑化してしまうため許可していない。
 
 ## Ref.
 
