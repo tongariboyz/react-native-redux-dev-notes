@@ -7,7 +7,7 @@ Reduxの[examples](https://github.com/rackt/redux/tree/master/examples)では、
 
 ## Smart Components
 
-Smart ComponentsはStoreへのアクセスやActionの発行、Dumb Componentsへのデータ・メソッドの受け渡しを行い、1つ以上のSmart/Dumb Componentをラップする。Smart Components自体はスタイルを持たない。
+Smart ComponentsはStoreへのアクセスやActionの発行、Dumb Componentsへのデータ・メソッドの受け渡しを行い、1つ以上のSmart/Dumb Componentを内包する。Smart Components自体はスタイルを持たない。
 
 - 1つ以上のSmart/Dumb Componentを内包する
 - StoreからStateを取得し、子コンポーネントへ渡す
