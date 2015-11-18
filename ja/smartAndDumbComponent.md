@@ -16,27 +16,25 @@ Smart ComponentsはStoreへのアクセスやActionの発行、Dumb Components�
 
 ### Smart Componentの例
 
-[rackt/redux: examples/counter/containers/App.js](https://github.com/rackt/redux/blob/master/examples/counter/containers/App.js)
+[rackt/redux: examples/counter/containers/App.js](https://github.com/rackt/redux/blob/master/examples/counter/containers/App.js)を書き直したもの
 
 connectでstateとactionを該当の（Counter）コンポーネントへ渡している。コンポーネント側は、渡されたデータをpropsとして受け取れる。
 
 ```js
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-import Counter from '../components/Counter'
-import * as CounterActions from '../actions/counter'
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import Counter from '../components/Counter';
+import * as CounterActions from '../actions/counter';
 
 function mapStateToProps(state) {
-  return {
-    counter: state.counter
-  }
+  return {counter: state.counter};
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(CounterActions, dispatch)
+  return bindActionCreators(CounterActions, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter)
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
 ```
 
 
@@ -53,41 +51,31 @@ Dumb ComponentsはStoreへのアクセスやActionの発行はせず、propsで�
 
 ### Dumb Componentの例
 
-[rackt/redux: examples/counter/components/Counter.js](https://github.com/rackt/redux/blob/master/examples/counter/components/Counter.js)
+[rackt/redux: examples/counter/components/Counter.js](https://github.com/rackt/redux/blob/master/examples/counter/components/Counter.js)を書き直したもの
 
 処理や値は全てpropsとして親（Smart Component）から受け取るようになっているのがわかる。
 
 ```js
-import React, { Component, PropTypes } from 'react'
+import React, {Component, PropTypes} from 'react';
 
-class Counter extends Component {
+export default class Counter extends Component {
+
+  static propTypes = {
+    counter: PropTypes.number.isRequired,
+    decrement: PropTypes.func.isRequired,
+    increment: PropTypes.func.isRequired
+  }
+
   render() {
-    const { increment, incrementIfOdd, incrementAsync, decrement, counter } = this.props
     return (
-      <p>
-        Clicked: {counter} times
-        {' '}
-        <button onClick={increment}>+</button>
-        {' '}
-        <button onClick={decrement}>-</button>
-        {' '}
-        <button onClick={incrementIfOdd}>Increment if odd</button>
-        {' '}
-        <button onClick={() => incrementAsync()}>Increment async</button>
-      </p>
-    )
+      <div>
+        <p>{this.props.counter}</p>
+        <button onClick={this.props.increment}>+</button>
+        <button onClick={this.props.decrement}>-</button>
+      </div>
+    );
   }
 }
-
-Counter.propTypes = {
-  increment: PropTypes.func.isRequired,
-  incrementIfOdd: PropTypes.func.isRequired,
-  incrementAsync: PropTypes.func.isRequired,
-  decrement: PropTypes.func.isRequired,
-  counter: PropTypes.number.isRequired
-}
-
-export default Counter
 ```
 
 
