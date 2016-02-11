@@ -4,3 +4,5 @@ plugins:
 rules:
   no-undef: 0
   no-unused-vars: 0
+  # @see: https://github.com/eslint/eslint-plugin-markdown/issues/48
+  eol-last: 0
