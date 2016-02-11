@@ -48,7 +48,7 @@
     "gitbook-plugin-include-codeblock": "^1.6.1",
     "gitbook-plugin-japanese-support": "0.0.1",
     "gitbook-summary-to-path": "^1.0.1",
-    "mocha": "^2.3.3",
+    "mocha": "^2.4.5",
     "npm-run-all": "^1.5.1",
     "power-assert": "^1.1.0",
     "technical-word-rules": "^1.2.4",
