@@ -52,7 +52,7 @@
     "npm-run-all": "^1.5.1",
     "power-assert": "^1.1.0",
     "technical-word-rules": "^1.2.4",
-    "textlint": "^5.0.3",
+    "textlint": "^5.5.4",
     "textlint-plugin-jtf-style": "^1.0.1",
     "textlint-rule-max-ten": "^2.0.1",
     "textlint-rule-no-mix-dearu-desumasu": "^1.4.0",
