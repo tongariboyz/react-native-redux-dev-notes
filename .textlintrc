@@ -1,6 +1,3 @@
-plugins:
-  - jtf-style
-
 rules:
   # 一文中の句点数制限
   # https://github.com/azu/textlint-rule-max-ten
@@ -40,9 +37,10 @@ rules:
   # JTF日本語標準スタイルガイド
   # https://github.com/azu/textlint-plugin-JTF-style
   # XXX: デフォルトだと全ルールが有効
-  ##
-  # 本文でのである調、ですます調の混在禁止
-  # XXX: dearu-desumasu で設定済
-  jtf-style/1.1.1.本文: false
-  # カタカナの長音を強制
-  jtf-style/2.1.6.カタカナの長音: false
+  preset-jtf-style:
+    ##
+    # 本文でのである調、ですます調の混在禁止
+    # XXX: dearu-desumasu で設定済
+    jtf-style/1.1.1.本文: false
+    # カタカナの長音を強制
+    jtf-style/2.1.6.カタカナの長音: false
