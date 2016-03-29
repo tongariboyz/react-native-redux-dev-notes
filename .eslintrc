@@ -1,5 +1,10 @@
-extends: kanmu/react
+extends:
+  - kanmu
+  - kanmu/browser
+  - kanmu/node
+  - kanmu/react-native
 parser: babel-eslint
 
 rules:
   require-jsdoc: 0
+  react/prefer-stateless-function: 0
