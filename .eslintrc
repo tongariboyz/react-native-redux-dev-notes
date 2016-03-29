@@ -1,4 +1,8 @@
-extends: kanmu/react
+extends:
+  - kanmu
+  - kanmu/browser
+  - kanmu/node
+  - kanmu/react-native
 parser: babel-eslint
 
 rules:
