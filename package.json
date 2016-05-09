@@ -41,7 +41,7 @@
     "eslint": "^2.5.3",
     "eslint-config-kanmu": "^11.0.0",
     "eslint-plugin-markdown": "git://github.com/eslint/eslint-plugin-markdown.git",
-    "eslint-plugin-react": "^4.2.3",
+    "eslint-plugin-react": "^5.1.0",
     "eslint-plugin-react-native": "^1.0.0",
     "eslint-plugin-sorting": "0.0.1",
     "espower-babel": "^4.0.1",
