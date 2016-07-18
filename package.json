@@ -43,7 +43,7 @@
     "eslint-plugin-markdown": "git://github.com/eslint/eslint-plugin-markdown.git",
     "eslint-plugin-react": "^5.1.1",
     "eslint-plugin-react-native": "^1.0.0",
-    "eslint-plugin-sorting": "0.2.2",
+    "eslint-plugin-sorting": "0.3.0",
     "espower-babel": "^4.0.1",
     "gitbook-cli": "^2.1.2",
     "gitbook-plugin-include-codeblock": "^1.6.1",
